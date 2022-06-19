@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { APP_CONSTANTS } from '../../utils/constants';
 
 export const gameLevelSlice = createSlice({
 	name: 'level',
@@ -7,11 +6,8 @@ export const gameLevelSlice = createSlice({
 		value: ''
 	},
 	reducers: {
-		startBeginnerLevel: state => {
-			state.value = APP_CONSTANTS.GAME_LEVEL.BEGINNER;
-		},
-		startIntermediateLevel: state => {
-			state.value = APP_CONSTANTS.GAME_LEVEL.INTERMEDIATE;
+		startLevel: (state, payload) => {
+			state.value = payload.payload.level;
 		},
 		resetLevel: (state) => {
 			state.value = '';
@@ -20,6 +16,6 @@ export const gameLevelSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { startBeginnerLevel, startIntermediateLevel, resetLevel } = gameLevelSlice.actions;
+export const { startLevel, resetLevel } = gameLevelSlice.actions;
 
 export const gameLevelReducer = gameLevelSlice.reducer;

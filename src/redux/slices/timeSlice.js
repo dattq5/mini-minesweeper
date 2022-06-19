@@ -9,8 +9,6 @@ export const timeSlice = createSlice({
 		startCountTime: state => {
 			state.value += 1;
 		},
-		stopCountTime: () => {
-		},
 		resetTime: (state) => {
 			state.value = 0;
 		}
@@ -18,6 +16,6 @@ export const timeSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { startCountTime, stopCountTime, resetTime } = timeSlice.actions;
+export const { startCountTime, resetTime } = timeSlice.actions;
 
 export const timeReducer = timeSlice.reducer;

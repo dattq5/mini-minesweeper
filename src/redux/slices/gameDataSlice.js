@@ -1,17 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initState = {
+	numOfMines: 0,
+	countUnopen: -1,
+	gameData: [],
+	resultData: [],
+	gameResultMessage: '',
+	isPlaying: false
+};
+
 export const gameDataSlice = createSlice({
 	name: 'data',
 	initialState: {
-		value: []
+		value: {...initState}
 	},
 	reducers: {
 		initData: (state, payload) => {
-			state.value = JSON.parse(JSON.stringify(payload));
+			state.value = {...state.value, ...payload.payload};
 		},
 		getData: state => state.value,
 		resetData: state => {
-			state.value = [];
+			state.value = JSON.parse(JSON.stringify(initState));
 		}
 	}
 });

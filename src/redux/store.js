@@ -21,7 +21,8 @@ const persistConfig = {
 	storage,
 };
 
-const rootReducer = combineReducers({gameData: gameDataReducer, gameLevel: gameLevelReducer, time: timeReducer});
+// const rootReducer = combineReducers({gameData: gameDataReducer, gameLevel: gameLevelReducer, time: timeReducer});
+const rootReducer = combineReducers({gameLevel: gameLevelReducer});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 

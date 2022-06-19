@@ -13,3 +13,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.open--1 {
+  background-color: black;
+}
+.open-0 {
+  background-color: green;
+}
+.open-1 {
+  background-color: lightblue;
+  &::after {
+    content: '1';
+  }
+}
+.open-2 {
+  background-color: yellow;
+  &::after {
+    content: '2';
+  }
+}
+.open-3 {
+  background-color: orange;
+  &::after {
+    content: '3';
+  }
+}
+.open-4 {
+  background-color: red;
+  &::after {
+    content: '4';
+  }
+}
+.open-5 {
+  background-color: purple;
+  &::after {
+    content: '5';
+  }
+}
+.open-6 {
+  background-color: purple;
+  &::after {
+    content: '6';
+  }
+}
+.open-7 {
+  background-color: purple;
+  &::after {
+    content: '7';
+  }
+}
+.open-8 {
+  background-color: purple;
+  &::after {
+    content: '8';
+  }
+}
