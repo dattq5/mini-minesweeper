@@ -2,7 +2,7 @@
   "name": "mini-sweeper",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://dattq5.github.io",
+  "homepage": "https://dattq5.github.io/mini-minesweeper/",
   "scripts": {
     "dev": "vite",
     "start": "vite",
